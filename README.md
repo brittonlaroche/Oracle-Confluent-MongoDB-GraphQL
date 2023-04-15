@@ -4,3 +4,39 @@ Learn how to update a legacy Oracle system by using GraphQL to update a MongoDB 
 MongoDB GraphQL Documentation.  
 [https://www.mongodb.com/docs/atlas/app-services/graphql/](https://www.mongodb.com/docs/atlas/app-services/graphql/).  
 [https://www.mongodb.com/developer/products/realm/graphql-easy/](https://www.mongodb.com/developer/products/realm/graphql-easy/).  
+
+### Next GEN POS Order Examples
+
+```JSON
+{
+  "_id":{"$oid":"6439fe117ec419fd7f5e88a8"},
+  "CUSTOMER_ID":{"$numberLong":"146"},
+  "EMAIL_ADDRESS":"rey.wada@internalmail",
+  "FULL_NAME":"Rey Wada",
+  "STORE_ID":{"$numberLong":"4"},
+  "STORE_NAME":"New York City",
+  "ORDER_DATETIME":{"$date":{"$numberLong":"1680779156000"}},
+  "ORDER_STATUS":"COMPLETE","ORDER_TOTAL":{"$numberDouble":"82.41"},
+  "PRODUCT_LIST":[
+    {"PRODUCT_ID":{"$numberLong":"19"},"PRDOUCT_NAME":"Men's Coat (Red)","UNIT_PRICE":{"$numberDouble":"28.21"}},
+    {"PRODUCT_ID":{"$numberLong":"28"},"PRODUCT_NAME":"Men's Hoodie (Red)","UNIT_PRICE":{"$numberDouble":"24.71"}},
+    {"PRODUCT_ID":{"$numberLong":"9"},"PRODUCT_NAME":"Women's Jeans (Brown)","UNIT_PRICE":{"$numberDouble":"29.49"}}
+    ]
+}
+
+{
+  "_id":{"$oid":"64398a780c4e4d07cf6eacb6"},
+  "CUSTOMER_ID":{"$numberLong":"139"},
+  "EMAIL_ADDRESS":"elaine.moncure@internalmail",
+  "FULL_NAME":"Elaine Moncure",
+  "STORE_ID":{"$numberLong":"3"},
+  "STORE_NAME":"Seattle",
+  "ORDER_DATETIME":{"$date":{"$numberLong":"1680779156000"}},
+  "ORDER_STATUS":"COMPLETE","ORDER_TOTAL":{"$numberDouble":"52.92"},
+  "PRODUCT_LIST":[
+    {"PRODUCT_ID":{"$numberLong":"19"},"PRDOUCT_NAME":"Men's Coat (Red)","UNIT_PRICE":{"$numberDouble":"28.21"}},
+    {"PRODUCT_ID":{"$numberLong":"28"},"PRODUCT_NAME":"Men's Hoodie (Red)","UNIT_PRICE":{"$numberDouble":"24.71"}}
+    ]
+}
+
+```

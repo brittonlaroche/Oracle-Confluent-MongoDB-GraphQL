@@ -96,3 +96,54 @@ MongoDB GraphQL Documentation.
 ```
 [https://realm.mongodb.com/groups/641519d8f14d271731440d7a/apps/643a013931a8f6ef9a5917cd/sdks](https://realm.mongodb.com/groups/641519d8f14d271731440d7a/apps/643a013931a8f6ef9a5917cd/sdks)
 [https://learning.postman.com/docs/sending-requests/graphql/graphql/](https://learning.postman.com/docs/sending-requests/graphql/graphql/)
+
+```JSON
+query {
+  ngPosCustomerOrder {
+    CUSTOMER_ID
+		EMAIL_ADDRESS
+		FULL_NAME
+		ORDER_DATETIME
+		ORDER_STATUS
+		ORDER_TOTAL
+		STORE_ID
+		STORE_NAME
+    PRODUCT_LIST {
+      PRODUCT_ID
+      PRODUCT_NAME
+      UNIT_PRICE
+    }
+		_id
+  }
+}
+```
+
+```JSON
+{
+  "data": {
+    "ngPosCustomerOrder": {
+      "CUSTOMER_ID": "139",
+      "EMAIL_ADDRESS": "elaine.moncure@internalmail",
+      "FULL_NAME": "Elaine Moncure",
+      "ORDER_DATETIME": "2023-04-06T11:05:56Z",
+      "ORDER_STATUS": "COMPLETE",
+      "ORDER_TOTAL": 52.92,
+      "PRODUCT_LIST": [
+        {
+          "PRODUCT_ID": "19",
+          "PRODUCT_NAME": "Men's Coat (Red)",
+          "UNIT_PRICE": 28.21
+        },
+        {
+          "PRODUCT_ID": "28",
+          "PRODUCT_NAME": "Men's Hoodie (Red)",
+          "UNIT_PRICE": 24.71
+        }
+      ],
+      "STORE_ID": "3",
+      "STORE_NAME": "Seattle",
+      "_id": "64398a780c4e4d07cf6eacb6"
+    }
+  }
+}
+```

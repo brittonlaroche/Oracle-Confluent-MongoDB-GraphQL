@@ -40,3 +40,61 @@ MongoDB GraphQL Documentation.
 }
 
 ```
+
+
+### GraphQL Schema
+```graphql
+{
+  "title": "NgPosCustomerOrder",
+  "properties": {
+    "CUSTOMER_ID": {
+      "bsonType": "long"
+    },
+    "EMAIL_ADDRESS": {
+      "bsonType": "string"
+    },
+    "FULL_NAME": {
+      "bsonType": "string"
+    },
+    "ORDER_DATETIME": {
+      "bsonType": "date"
+    },
+    "ORDER_STATUS": {
+      "bsonType": "string"
+    },
+    "ORDER_TOTAL": {
+      "bsonType": "double"
+    },
+    "PRODUCT_LIST": {
+      "bsonType": "array",
+      "items": {
+        "bsonType": "object",
+        "properties": {
+          "PRDOUCT_NAME": {
+            "bsonType": "string"
+          },
+          "PRODUCT_ID": {
+            "bsonType": "long"
+          },
+          "PRODUCT_NAME": {
+            "bsonType": "string"
+          },
+          "UNIT_PRICE": {
+            "bsonType": "double"
+          }
+        }
+      }
+    },
+    "STORE_ID": {
+      "bsonType": "long"
+    },
+    "STORE_NAME": {
+      "bsonType": "string"
+    },
+    "_id": {
+      "bsonType": "objectId"
+    }
+  }
+}
+
+```

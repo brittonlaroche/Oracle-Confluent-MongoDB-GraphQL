@@ -95,3 +95,4 @@ MongoDB GraphQL Documentation.
 }
 ```
 [https://realm.mongodb.com/groups/641519d8f14d271731440d7a/apps/643a013931a8f6ef9a5917cd/sdks](https://realm.mongodb.com/groups/641519d8f14d271731440d7a/apps/643a013931a8f6ef9a5917cd/sdks)
+[https://learning.postman.com/docs/sending-requests/graphql/graphql/](https://learning.postman.com/docs/sending-requests/graphql/graphql/)

@@ -147,3 +147,5 @@ query {
   }
 }
 ```
+
+[https://us-west-2.aws.realm.mongodb.com/api/client/v2.0/app/nextgenpos-ooetv/graphql](https://us-west-2.aws.realm.mongodb.com/api/client/v2.0/app/nextgenpos-ooetv/graphql)

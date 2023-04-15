@@ -43,7 +43,7 @@ MongoDB GraphQL Documentation.
 
 
 ### GraphQL Schema
-```graphql
+```JSON
 {
   "title": "NgPosCustomerOrder",
   "properties": {
@@ -70,9 +70,6 @@ MongoDB GraphQL Documentation.
       "items": {
         "bsonType": "object",
         "properties": {
-          "PRDOUCT_NAME": {
-            "bsonType": "string"
-          },
           "PRODUCT_ID": {
             "bsonType": "long"
           },
@@ -96,5 +93,4 @@ MongoDB GraphQL Documentation.
     }
   }
 }
-
 ```

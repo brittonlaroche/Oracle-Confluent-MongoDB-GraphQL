@@ -3,7 +3,9 @@ Learn how to update a legacy Oracle system by using GraphQL to update a MongoDB 
 
 MongoDB GraphQL Documentation.  
 [https://www.mongodb.com/docs/atlas/app-services/graphql/](https://www.mongodb.com/docs/atlas/app-services/graphql/).  
-[https://www.mongodb.com/developer/products/realm/graphql-easy/](https://www.mongodb.com/developer/products/realm/graphql-easy/).  
+[https://www.mongodb.com/developer/products/realm/graphql-easy/](https://www.mongodb.com/developer/products/realm/graphql-easy/). 
+[https://www.mongodb.com/docs/atlas/app-services/graphql/cli/](https://www.mongodb.com/docs/atlas/app-services/graphql/cli/).  
+[https://www.mongodb.com/docs/atlas/app-services/graphql/authenticate/](https://www.mongodb.com/docs/atlas/app-services/graphql/authenticate/)
 
 ### Next GEN POS Order Examples
 

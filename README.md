@@ -152,3 +152,11 @@ query {
 
 [https://us-west-2.aws.realm.mongodb.com/api/client/v2.0/app/nextgenpos-ooetv/graphql](https://us-west-2.aws.realm.mongodb.com/api/client/v2.0/app/nextgenpos-ooetv/graphql).  
 [https://learning.postman.com/docs/sending-requests/authorization/#jwt-bearer](https://learning.postman.com/docs/sending-requests/authorization/#jwt-bearer)
+
+```
+curl -X POST 'https://us-west-2.aws.realm.mongodb.com/api/client/v2.0/app/<APP-ID>/graphql' \
+   --header 'email: <EMAIL ADRRESS>' \
+   --header 'password: <PASSWORD>' \
+   --header 'Content-Type: application/json' \
+   --data-raw '{"query": "query {ngPosCustomerOrder(query:{CUSTOMER_ID:\"139\"}) {CUSTOMER_ID EMAIL_ADDRESS FULL_NAME ORDER_DATETIME ORDER_STATUS ORDER_TOTAL STORE_ID STORE_NAME PRODUCT_LIST { PRODUCT_ID PRODUCT_NAME UNIT_PRICE } _id}}"}'
+```

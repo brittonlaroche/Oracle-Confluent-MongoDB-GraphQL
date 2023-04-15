@@ -101,7 +101,7 @@ MongoDB GraphQL Documentation.
 
 ```js
 query {
-  ngPosCustomerOrder {
+  ngPosCustomerOrders {
     CUSTOMER_ID
 		EMAIL_ADDRESS
 		FULL_NAME
@@ -190,3 +190,51 @@ curl -X POST 'https://us-west-2.aws.realm.mongodb.com/api/client/v2.0/app/<APP-I
    --header 'Content-Type: application/json' \
    --data-raw '{"query": "query {ngPosCustomerOrder(query:{CUSTOMER_ID:\"139\"}) {CUSTOMER_ID EMAIL_ADDRESS FULL_NAME ORDER_DATETIME ORDER_STATUS ORDER_TOTAL STORE_ID STORE_NAME PRODUCT_LIST { PRODUCT_ID PRODUCT_NAME UNIT_PRICE } _id}}"}'
 ```
+
+```
+mutation {
+  insertOneNgPosCustomerOrder(data: {
+    CUSTOMER_ID: "149"
+    EMAIL_ADDRESS: "quinn.yerdon@internalmail"
+    FULL_NAME: "Quinn Yerdon"
+    ORDER_DATETIME: "2023-04-06T11:05:56Z"
+    ORDER_STATUS: "COMPLETE"
+    ORDER_TOTAL: 90.39
+    STORE_ID: "16"
+    STORE_NAME: "Sydney"
+    PRODUCT_LIST: [
+    	{ 
+      PRODUCT_ID: "1"
+      PRODUCT_NAME: "Boy's Shirt (White)"
+      UNIT_PRICE: 29.55
+      },
+      { 
+      PRODUCT_ID: "2"
+      PRODUCT_NAME: "Women's Shirt (Green)"
+      UNIT_PRICE: 16.17
+      },
+      { 
+      PRODUCT_ID: "3"
+      PRODUCT_NAME: "Boy's Sweater (Green)"
+      UNIT_PRICE: 44.17
+      }
+  	]
+  }) {
+    _id
+    CUSTOMER_ID
+    EMAIL_ADDRESS
+    FULL_NAME
+    ORDER_DATETIME
+    ORDER_STATUS
+    ORDER_TOTAL
+    STORE_ID
+    STORE_NAME
+    PRODUCT_LIST {
+      PRODUCT_ID
+      PRODUCT_NAME
+      UNIT_PRICE
+    }
+  }
+}
+```
+

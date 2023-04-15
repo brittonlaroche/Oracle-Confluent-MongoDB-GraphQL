@@ -123,29 +123,59 @@ query {
 ```JSON
 {
   "data": {
-    "ngPosCustomerOrder": {
-      "CUSTOMER_ID": "139",
-      "EMAIL_ADDRESS": "elaine.moncure@internalmail",
-      "FULL_NAME": "Elaine Moncure",
-      "ORDER_DATETIME": "2023-04-06T11:05:56Z",
-      "ORDER_STATUS": "COMPLETE",
-      "ORDER_TOTAL": 52.92,
-      "PRODUCT_LIST": [
-        {
-          "PRODUCT_ID": "19",
-          "PRODUCT_NAME": "Men's Coat (Red)",
-          "UNIT_PRICE": 28.21
-        },
-        {
-          "PRODUCT_ID": "28",
-          "PRODUCT_NAME": "Men's Hoodie (Red)",
-          "UNIT_PRICE": 24.71
-        }
-      ],
-      "STORE_ID": "3",
-      "STORE_NAME": "Seattle",
-      "_id": "64398a780c4e4d07cf6eacb6"
-    }
+    "ngPosCustomerOrders": [
+      {
+        "CUSTOMER_ID": "139",
+        "EMAIL_ADDRESS": "elaine.moncure@internalmail",
+        "FULL_NAME": "Elaine Moncure",
+        "ORDER_DATETIME": "2023-04-06T11:05:56Z",
+        "ORDER_STATUS": "COMPLETE",
+        "ORDER_TOTAL": 52.92,
+        "PRODUCT_LIST": [
+          {
+            "PRODUCT_ID": "19",
+            "PRODUCT_NAME": "Men's Coat (Red)",
+            "UNIT_PRICE": 28.21
+          },
+          {
+            "PRODUCT_ID": "28",
+            "PRODUCT_NAME": "Men's Hoodie (Red)",
+            "UNIT_PRICE": 24.71
+          }
+        ],
+        "STORE_ID": "3",
+        "STORE_NAME": "Seattle",
+        "_id": "64398a780c4e4d07cf6eacb6"
+      },
+      {
+        "CUSTOMER_ID": "146",
+        "EMAIL_ADDRESS": "rey.wada@internalmail",
+        "FULL_NAME": "Rey Wada",
+        "ORDER_DATETIME": "2023-04-06T11:05:56Z",
+        "ORDER_STATUS": "COMPLETE",
+        "ORDER_TOTAL": 82.41,
+        "PRODUCT_LIST": [
+          {
+            "PRODUCT_ID": "19",
+            "PRODUCT_NAME": "Men's Coat (Red)",
+            "UNIT_PRICE": 28.21
+          },
+          {
+            "PRODUCT_ID": "28",
+            "PRODUCT_NAME": "Men's Hoodie (Red)",
+            "UNIT_PRICE": 24.71
+          },
+          {
+            "PRODUCT_ID": "9",
+            "PRODUCT_NAME": "Women's Jeans (Brown)",
+            "UNIT_PRICE": 29.49
+          }
+        ],
+        "STORE_ID": "4",
+        "STORE_NAME": "New York City",
+        "_id": "6439fe117ec419fd7f5e88a8"
+      }
+    ]
   }
 }
 ```

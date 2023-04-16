@@ -183,12 +183,13 @@ query {
 [https://us-west-2.aws.realm.mongodb.com/api/client/v2.0/app/nextgenpos-ooetv/graphql](https://us-west-2.aws.realm.mongodb.com/api/client/v2.0/app/nextgenpos-ooetv/graphql).  
 [https://learning.postman.com/docs/sending-requests/authorization/#jwt-bearer](https://learning.postman.com/docs/sending-requests/authorization/#jwt-bearer)
 
+### Query Curl Command
 ```
 curl -X POST 'https://us-west-2.aws.realm.mongodb.com/api/client/v2.0/app/<APP-ID>/graphql' \
    --header 'email: <EMAIL ADRRESS>' \
    --header 'password: <PASSWORD>' \
    --header 'Content-Type: application/json' \
-   --data-raw '{"query": "query {ngPosCustomerOrder(query:{CUSTOMER_ID:\"139\"}) {CUSTOMER_ID EMAIL_ADDRESS FULL_NAME ORDER_DATETIME ORDER_STATUS ORDER_TOTAL STORE_ID STORE_NAME PRODUCT_LIST { PRODUCT_ID PRODUCT_NAME UNIT_PRICE } _id}}"}'
+   --data-raw '{"query": "query {ngPosCustomerOrders(query:{CUSTOMER_ID:\"139\"}) {CUSTOMER_ID EMAIL_ADDRESS FULL_NAME ORDER_DATETIME ORDER_STATUS ORDER_TOTAL STORE_ID STORE_NAME PRODUCT_LIST { PRODUCT_ID PRODUCT_NAME UNIT_PRICE } _id}}"}'
 ```
 
 ```
@@ -238,3 +239,44 @@ mutation {
 }
 ```
 
+### Update CURL Command
+```
+curl -X POST 'https://us-west-2.aws.realm.mongodb.com/api/client/v2.0/app/<APP-ID>/graphql' \
+   --header 'email: <EMAIL ADDRESS>' \
+   --header 'password: <PASSWORD>' \
+   --header 'Content-Type: application/json' \
+   --data-raw '{"query": "mutation {updateOneNgPosCustomerOrder(query: { _id: \"643b362c63c60655d90b1159\" } set: { ORDER_TOTAL: 19.98 } ) { _id ORDER_TOTAL }}"}'
+```
+
+### Update Postman -- has to be a POST not a GET
+```
+mutation {
+    updateOneNgPosCustomerOrder(
+        query: { _id: "643b362c63c60655d90b1159" } 
+        set: { 
+            ORDER_TOTAL: 46.22, 
+            PRODUCT_LIST: [
+                { 
+                PRODUCT_ID: "1"
+                PRODUCT_NAME: "Boy's Shirt (White)"
+                UNIT_PRICE: 29.55
+                },
+                { 
+                PRODUCT_ID: "2"
+                PRODUCT_NAME: "Women's Shirt (Green)"
+                UNIT_PRICE: 16.17
+                }
+            ] 
+            } ) 
+        { 
+        _id 
+        CUSTOMER_ID
+        ORDER_TOTAL 
+        PRODUCT_LIST {
+            PRODUCT_ID
+            PRODUCT_NAME
+            UNIT_PRICE
+        }
+        }
+}
+```

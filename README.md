@@ -191,7 +191,7 @@ curl -X POST 'https://us-west-2.aws.realm.mongodb.com/api/client/v2.0/app/<APP-I
    --header 'Content-Type: application/json' \
    --data-raw '{"query": "query {ngPosCustomerOrders(query:{CUSTOMER_ID:\"139\"}) {CUSTOMER_ID EMAIL_ADDRESS FULL_NAME ORDER_DATETIME ORDER_STATUS ORDER_TOTAL STORE_ID STORE_NAME PRODUCT_LIST { PRODUCT_ID PRODUCT_NAME UNIT_PRICE } _id}}"}'
 ```
-
+### Insert one order Postman - Has to be a POST and not a GET... to pass in the graphQL mutation
 ```
 mutation {
   insertOneNgPosCustomerOrder(data: {

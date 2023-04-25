@@ -281,10 +281,15 @@ mutation {
 }
 ```
 
+Store the document as binary data to be sent to Oracle as a blob.   
+[https://www.mongodb.com/docs/manual/reference/method/BinData/](https://www.mongodb.com/docs/manual/reference/method/BinData/).   
+
+
+
 
 # Updating Oracle
 
-Oracle stores its product details information in the table as a BLOB.
+Oracle stores its product details information in the table as a BLOB.   
 
 ```json
 {

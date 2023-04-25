@@ -280,3 +280,26 @@ mutation {
         }
 }
 ```
+
+
+# Updating Oracle
+
+Oracle stores its product details information in the table as a BLOB.
+
+```json
+{
+  "colour" : "red",
+  "gender" : "Girl's",
+  "brand" : "BRANDNAME",
+  "description" : "description",
+  "sizes" : [ 
+    "1 Yr", "2 Yr", "3-4 Yr", "5-6 Yr", "7-8 Yr", "9-10 Yr" 
+  ],
+  "reviews" :  [
+    {
+      "rating" : 9,
+      "review" : "Review text"
+    }
+  ]
+}
+```

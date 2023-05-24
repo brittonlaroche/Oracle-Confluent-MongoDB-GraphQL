@@ -283,6 +283,8 @@ mutation {
 
 Store the document as binary data to be sent to Oracle as a blob.   
 [https://www.mongodb.com/docs/manual/reference/method/BinData/](https://www.mongodb.com/docs/manual/reference/method/BinData/).   
+[https://www.mongodb.com/docs/atlas/app-services/functions/context/#context-http](https://www.mongodb.com/docs/atlas/app-services/functions/context/#context-http).   
+[https://www.mongodb.com/docs/atlas/app-services/functions/globals/](https://www.mongodb.com/docs/atlas/app-services/functions/globals/)
 
 
 
